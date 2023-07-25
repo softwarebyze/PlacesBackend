@@ -1,3 +1,1 @@
-# group-rank
-# PlacesBackend
 # PlacesBackend
