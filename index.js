@@ -1,19 +1,34 @@
 // Import the framework and instantiate it
 import Fastify from "fastify";
+import { StreamChat } from "stream-chat";
+import dotenv from "dotenv";
+
+dotenv.config();
+
 const fastify = Fastify({
   logger: true,
 });
 
 const port = process.env.PORT || 8080;
+const host = "RENDER" in process.env ? `0.0.0.0` : `localhost`;
+
+// Define values.
+const api_key = process.env.STREAM_API_KEY;
+const api_secret = process.env.STREAM_API_SECRET;
+// const user_id = "john";
 
 // Declare a route
 fastify.get("/", async function handler(request, reply) {
-  return { hello: "world" };
+  // Initialize a Server Client
+  const serverClient = StreamChat.getInstance(api_key, api_secret);
+  // Create User Token
+  const token = serverClient.createToken(request.query.user_id);
+  return { token };
 });
 
 // Run the server!
 try {
-  await fastify.listen({ host: "0.0.0.0", port });
+  await fastify.listen({ host, port });
 } catch (err) {
   fastify.log.error(err);
   process.exit(1);
