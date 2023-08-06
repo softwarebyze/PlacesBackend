@@ -18,12 +18,24 @@ const api_secret = process.env.STREAM_API_SECRET;
 // const user_id = "john";
 
 // Declare a route
-fastify.get("/", async function handler(request, reply) {
+fastify.get("/:id", async function handler(request, reply) {
   // Initialize a Server Client
   const serverClient = StreamChat.getInstance(api_key, api_secret);
   // Create User Token
-  const token = serverClient.createToken(request.query.user_id);
+  const token = serverClient.createToken(request.params.id);
   return { token };
+});
+
+fastify.post("/update/:id", async (request, reply) => {
+  try {
+    const { id } = request.params;
+    const { details, token } = request.body;
+    const serverClient = StreamChat.getInstance(api_key, api_secret);
+    const user = await serverClient.connectUser({ id, ...details }, token);
+    return { user };
+  } catch (error) {
+    return { error };
+  }
 });
 
 // Run the server!
