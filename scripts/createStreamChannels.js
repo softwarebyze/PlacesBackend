@@ -2,7 +2,6 @@ import fs from "fs";
 import dotenv from "dotenv";
 import { StreamChat } from "stream-chat";
 import { v4 as uuidv4 } from "uuid";
-
 dotenv.config();
 
 const createStreamChannels = async (client, location, dataArray) => {
@@ -18,7 +17,7 @@ const createStreamChannels = async (client, location, dataArray) => {
           category: Category,
           location: location,
           name: Interest + " / " + location,
-          imageUrl: LinkURL,
+          image: LinkURL,
           created_by_id: "avraham_s",
         });
         await channel.create();
@@ -31,7 +30,7 @@ const createStreamChannels = async (client, location, dataArray) => {
   }
 };
 
-const interests = JSON.parse(fs.readFileSync("./interests.json", "utf8"));
+const interests = JSON.parse(fs.readFileSync("../interests.json", "utf8"));
 
 const api_key = process.env.STREAM_API_KEY;
 const api_secret = process.env.STREAM_API_SECRET;
