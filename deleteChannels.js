@@ -22,4 +22,6 @@ const deleteChannels = async (client, filter) => {
   }
 };
 
-deleteChannels(serverClient, { type: process.argv[2] });
+// deleteChannels(serverClient, { type: process.argv[2] });
+// deleteChannels(serverClient, { type: "team", location: "Eilat, Israel" });
+deleteChannels(serverClient, { type: "team", location: "Kansas City, Kansas" });

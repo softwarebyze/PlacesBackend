@@ -1,0 +1,26 @@
+[
+  {
+    "Link": "route.png",
+    "image": "https://firebasestorage.googleapis.com/v0/b/places-e6047.appspot.com/o/interest_images%2Froute.png?alt=media&token=f65bc8ca-8789-45c2-b6a2-9a222a56401b",
+    "category": "Apartments/Houses",
+    "interest": "For Sublet"
+  },
+  {
+    "Link": "rent.png",
+    "image": "https://firebasestorage.googleapis.com/v0/b/places-e6047.appspot.com/o/interest_images%2Frent.png?alt=media&token=2faabf0b-6828-4a14-889b-a3a8001f4ca5",
+    "category": "Apartments/Houses",
+    "interest": "For Rent"
+  },
+  {
+    "Link": "forsale.png",
+    "image": "https://firebasestorage.googleapis.com/v0/b/places-e6047.appspot.com/o/interest_images%2Fforsale.png?alt=media&token=cbc124f8-ec70-4ca7-9651-7880bd23489f",
+    "category": "Apartments/Houses",
+    "interest": "For Sale"
+  },
+  {
+    "Link": "match.png",
+    "image": "https://firebasestorage.googleapis.com/v0/b/places-e6047.appspot.com/o/interest_images%2Fmatch.png?alt=media&token=73cb7abb-2d3b-4bb7-9c06-087d6538a36b",
+    "category": "Apartments/Houses",
+    "interest": "Roommates Search"
+  }
+]

@@ -27,5 +27,5 @@ const removeSubstring = (str, regex) => {
   return newString;
 };
 
-const interests = turnCSVIntoJSON("../interests.csv");
-writeToFile("../interests.json", interests);
+const interests = turnCSVIntoJSON("interests.csv");
+writeToFile("interests.json", interests);
