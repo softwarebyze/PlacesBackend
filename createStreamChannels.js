@@ -49,9 +49,10 @@ const cities = [
   // "Rosh Ha'Ayin , Israel",
   // "Rishon Lezion, Israel",
   // "Berkeley, CA",
-  "Kansas City, KS",
+  // "Kansas City, KS",
   // "Givatayim, Israel",
   // "Bat Yam, Israel",
+  // "San Francisco, CA",
 ];
 
 cities.map(async (city) => {
